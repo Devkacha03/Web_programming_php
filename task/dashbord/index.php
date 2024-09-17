@@ -16,11 +16,12 @@
     <div class="container">
         <h1>Registration Form</h1>
         <!-- action="dashboad.php" method="post" enctype="multipart/form-data" -->
-        <form id="registerform" action="./HOMEPAGE.php" method="post">
+        <form id="registerform" action="dashboard.php" method="post">
+            <input type="text" value="dev.ai" readonly name="title" hidden>
             <fieldset>
                 <legend>Personal Information</legend>
                 <label for="first-name">Full Name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Full Name" required name="fname">
+                <input type="text" id="first-name" name="first-name" placeholder="Full Name" required name="fname" autocomplete="off" autofocus>
 
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender" required>
@@ -34,19 +35,19 @@
             <fieldset>
                 <legend>Contact Details</legend>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="off">
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="1234567899" min"10" max="10" required>
+                <input type="tel" id="phone" name="phone" placeholder="1234567899" pattern="[0-9]{10}" maxlength="10" required autocomplete="off">
 
                 <label for="address">Address:</label>
-                <textarea id="address" name="address" placeholder="123 Main St, City, Country" rows="4" required class="txtaare"></textarea>
+                <textarea id="address" name="address" placeholder="123 Main St, City, Country" rows="4" required class="txtaare" autocomplete="off"></textarea>
             </fieldset>
 
             <fieldset>
                 <legend>Professional Details</legend>
                 <label for="profession">Skill</label>
-                <textarea id="profession" name="profession" rows="4" placeholder="Enter Skill" required></textarea>
+                <textarea id="profession" name="profession" rows="4" placeholder="Enter Skill" required autocomplete="off"></textarea>
             </fieldset>
 
             <button type="submit" id="btnsubmit">Register</button>
