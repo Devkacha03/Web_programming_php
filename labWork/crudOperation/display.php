@@ -58,7 +58,7 @@ $result = mysqli_query($connection, $select_Data);
                             <td><?php echo $row['u_mono']; ?></td>
                             <td><?php echo $row['u_email']; ?></td>
                             <td><?php echo str_repeat('*', strlen(md5($row['u_password']))); ?></td>
-                            <td><a href="update.php"><button class="btn-primary">Update</button></a>
+                            <td><a href="update.php?updateid=<?php echo $row['id']; ?>"><button class="btn-primary">Update</button></a>
                                 <a href="delete.php?deleteid=<?php echo $row['id']; ?>"><button class="btn-danger">delete</button></a>
                             </td>
 

@@ -11,20 +11,20 @@ if (isset($_REQUEST['submit'])) {
 
   $insert = "INSERT INTO users_data (admission_no, u_name, u_mono, u_email, u_password) VALUES ('$admission_no', '$u_name', '$u_mono', '$u_email', '$u_password')";
 
-  // if (mysqli_query($connection, $insert)) {
-  //     echo "insert sucessfull";
-  // } else {
-  //     // echo "Insert error: " . mysqli_error($connection);
-  //     $error_code = mysqli_errno($connection);
-  //     switch ($error_code) {
-  //         case 1062: // Duplicate entry error code
-  //             echo "Error: The admission number, mobile number, or email address already exists. Please use a different value.";
-  //             break;
-  //         default:
-  //             echo "Insert error: " . mysqli_error($connection);
-  //             break;
-  //     }
-  // }
+  /* if (mysqli_query($connection, $insert)) {
+    echo "insert sucessfull";
+  } else {
+    // echo "Insert error: " . mysqli_error($connection);
+  $error_code = mysqli_errno($connection);
+  switch ($error_code) {
+    case 1062: // Duplicate entry error code
+      echo "Error: The admission number, mobile number, or email address already exists. Please use a different value.";
+      break;
+      default:
+      echo "Insert error: " . mysqli_error($connection);
+      break;
+    }
+  }*/
 
   // Use try-catch to handle exceptions
   try {
