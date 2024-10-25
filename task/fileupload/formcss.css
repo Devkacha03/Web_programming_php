@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="file"],
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.product-list {
+  margin-top: 20px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.product img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.product-details {
+  text-align: left;
+}
+
+.product-details h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-details p {
+  margin-bottom: 5px;
+}
+
+.product-details .price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Static Product Section */
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-static {
+  width: calc(20% - 10px); /* 5 products per row */
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-static img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-static h3 {
+  font-size: 14px;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.product-static p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.product-static .price {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-static {
+    width: calc(50% - 10px); /* 2 products per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-static {
+    width: 100%; /* 1 product per row */
+  }
+}
