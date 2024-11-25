@@ -1,0 +1,4 @@
+name : dev kacha
+city : rajkot
+designation : dba
+salary : 10000
